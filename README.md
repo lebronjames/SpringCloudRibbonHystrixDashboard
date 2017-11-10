@@ -1,0 +1,2 @@
+# SpringCloudRibbonHystrixDashboard
+Ribbon中引入Hystrix，实现消费者断路器功能，增加Hystrix 仪表盘
