@@ -7,15 +7,15 @@ import org.springframework.web.client.RestTemplate;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
-public class ComputeService {
+public class WorldService {
 
 	@Autowired
 	RestTemplate restTemplate;
 	
 	//增加@HystrixCommand注解来指定回调方法
 	@HystrixCommand(fallbackMethod="addServiceFallback")
-	public String add() {
-		return restTemplate.getForEntity("http://compute-serviceA/add?a=15&b=24", String.class)
+	public String world() {
+		return restTemplate.getForEntity("http://compute-serviceA/add?a=15&b=29", String.class)
 				.getBody();
 	}
 	
